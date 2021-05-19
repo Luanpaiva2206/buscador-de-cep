@@ -61,7 +61,8 @@ public class CepController {
 					alert.show();
 				}
 			} else {
-				alert.setContentText("Cep inválido.");
+				alert.setHeaderText("Cep inválido!");
+				alert.setContentText("Digite um cep válido com 8 dígitos.");
 				alert.show();
 			}
 		} else {
