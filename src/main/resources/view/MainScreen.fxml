@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -7,77 +8,104 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.buscadordecep.controller.CepController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="500.0" style="-fx-background-color: #F2F3F5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.buscadordecep.controller.CepController">
    <children>
-      <Group layoutX="100.0" layoutY="93.0">
+      <AnchorPane layoutX="-26.0" layoutY="-7.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
          <children>
-            <Label text="CEP:">
+            <Label layoutX="93.0" layoutY="14.0" text="BUSCADOR DE CEP">
                <font>
-                  <Font size="20.0" />
+                  <Font name="Calibri Light" size="36.0" />
                </font>
             </Label>
-            <Label layoutY="69.0" text="Logradouro: ">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label layoutY="138.0" text="Complemento:">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label layoutY="207.0" text="Bairro">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label layoutY="276.0" text="Localidade">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label layoutY="345.0" text="UF">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <TextField fx:id="txtCep" layoutY="30.0" prefHeight="30.0" prefWidth="200.0">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextField>
-            <TextField fx:id="txtLogradouro" editable="false" layoutY="99.0" prefHeight="30.0" prefWidth="400.0">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextField>
-            <TextField fx:id="txtComplemento" editable="false" layoutY="168.0" prefHeight="30.0" prefWidth="300.0">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextField>
-            <TextField fx:id="txtBairro" editable="false" layoutY="237.0" prefHeight="30.0" prefWidth="300.0">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextField>
-            <TextField fx:id="txtLocalidade" editable="false" layoutY="306.0" prefHeight="30.0" prefWidth="300.0">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextField>
-            <TextField fx:id="txtUf" editable="false" layoutY="375.0" prefHeight="30.0" prefWidth="70.0">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextField>
-            <Button fx:id="btnPesquisar" layoutX="250.0" layoutY="31.0" mnemonicParsing="false" onAction="#btnPesquisar" prefHeight="38.0" prefWidth="150.0" text="PESQUISAR" />
+            <Group layoutX="30.0" layoutY="63.0">
+               <children>
+                  <Label text="CEP">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutY="90.0" text="Logradouro">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutY="179.0" text="Complemento">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutY="268.0" text="Bairro">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutY="357.0" text="Localidade">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutY="446.0" text="UF">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtCep" layoutY="50.0" prefHeight="30.0" prefWidth="200.0" promptText="DIGITE O CEP">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtLogradouro" editable="false" layoutY="140.0" prefHeight="30.0" prefWidth="400.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtComplemento" editable="false" layoutY="229.0" prefHeight="30.0" prefWidth="300.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtBairro" editable="false" layoutY="318.0" prefHeight="30.0" prefWidth="300.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtLocalidade" editable="false" layoutY="407.0" prefHeight="30.0" prefWidth="300.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtUf" editable="false" layoutY="496.0" prefHeight="30.0" prefWidth="70.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="btnPesquisar" layoutX="223.0" layoutY="50.0" mnemonicParsing="false" onAction="#btnPesquisar" prefHeight="39.0" prefWidth="177.0" text="PESQUISAR">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Group>
+            <Label layoutX="108.0" layoutY="629.0" text="© 2021 Luan Paiva" />
          </children>
-      </Group>
-      <Label layoutX="146.0" layoutY="26.0" text="BUSCADOR DE CEP">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </Label>
+      </AnchorPane>
    </children>
 </AnchorPane>

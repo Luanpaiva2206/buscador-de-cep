@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 
 public class CepController {
 	@FXML
@@ -48,7 +49,7 @@ public class CepController {
 		CepModel cepModel = cepCliente.buscar();
 		Alert alert = new Alert(Alert.AlertType.INFORMATION);
 		if (cepModel != null) {
-			if(cepModel.getCep() != null) {
+			if (cepModel.getCep() != null) {
 				this.txtLogradouro.setText(cepModel.getLogradouro());
 				this.txtComplemento.setText(cepModel.getComplemento());
 				this.txtBairro.setText(cepModel.getBairro());
