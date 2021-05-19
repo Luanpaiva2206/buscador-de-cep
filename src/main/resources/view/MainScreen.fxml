@@ -57,23 +57,6 @@
                   <Insets bottom="10.0" top="10.0" />
                </padding>
             </Label>
-            <Group layoutX="342.0" layoutY="420.0" AnchorPane.rightAnchor="30.0">
-               <children>
-                  <Label text="UF">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" top="10.0" />
-                     </padding>
-                  </Label>
-                  <TextField fx:id="txtUf" editable="false" layoutY="50.0" prefHeight="30.0" prefWidth="70.0">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </TextField>
-               </children>
-            </Group>
             <TextField fx:id="txtCep" layoutX="30.0" layoutY="113.0" prefHeight="30.0" prefWidth="200.0" promptText="DIGITE O CEP" AnchorPane.leftAnchor="30.0">
                <font>
                   <Font size="18.0" />
@@ -99,6 +82,23 @@
                   <Font size="18.0" />
                </font>
             </TextField>
+            <Group layoutX="342.0" layoutY="420.0" AnchorPane.rightAnchor="30.0">
+               <children>
+                  <Label text="UF">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtUf" editable="false" layoutY="50.0" prefHeight="30.0" prefWidth="70.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Group>
             <Button fx:id="btnPesquisar" layoutX="253.0" layoutY="113.0" mnemonicParsing="false" onAction="#btnPesquisar" prefHeight="39.0" prefWidth="177.0" text="PESQUISAR" AnchorPane.rightAnchor="30.0">
                <font>
                   <Font size="18.0" />

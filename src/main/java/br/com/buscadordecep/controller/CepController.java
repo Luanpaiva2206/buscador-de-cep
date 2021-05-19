@@ -44,25 +44,32 @@ public class CepController {
 
 	@FXML
 	void btnPesquisar(ActionEvent event) {
-		String cep = this.txtCep.getText();
-		CepClient cepCliente = new CepClient(new RestTemplate(), "https://viacep.com.br/ws/" + cep + "/json/");
-		CepModel cepModel = cepCliente.buscar();
 		Alert alert = new Alert(Alert.AlertType.INFORMATION);
-		if (cepModel != null) {
-			if (cepModel.getCep() != null) {
-				this.txtLogradouro.setText(cepModel.getLogradouro());
-				this.txtComplemento.setText(cepModel.getComplemento());
-				this.txtBairro.setText(cepModel.getBairro());
-				this.txtLocalidade.setText(cepModel.getLocalidade());
-				this.txtUf.setText(cepModel.getUf());
+		if (!this.txtCep.getText().equals("")) {
+			String cep = this.txtCep.getText();
+			CepClient cepCliente = new CepClient(new RestTemplate(), "https://viacep.com.br/ws/" + cep + "/json/");
+			CepModel cepModel = cepCliente.buscar();
+			if (cepModel != null) {
+				if (cepModel.getCep() != null) {
+					this.txtLogradouro.setText(cepModel.getLogradouro());
+					this.txtComplemento.setText(cepModel.getComplemento());
+					this.txtBairro.setText(cepModel.getBairro());
+					this.txtLocalidade.setText(cepModel.getLocalidade());
+					this.txtUf.setText(cepModel.getUf());
+				} else {
+					alert.setContentText("Não há dados a serem exibidos.");
+					alert.show();
+				}
 			} else {
-				alert.setContentText("Cep não encontrado!");
+				alert.setContentText("Cep inválido.");
 				alert.show();
 			}
 		} else {
-			alert.setContentText("Cep inválido!");
+			alert.setContentText("Preencha o campo de CEP!");
+			this.txtCep.requestFocus();
 			alert.show();
 		}
+
 	}
 
 	@FXML
